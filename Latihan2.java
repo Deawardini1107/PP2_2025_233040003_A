@@ -4,18 +4,16 @@
  */
 package PERTEMUN5;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.*;
 
 public class Latihan2 {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Latihan 2 - JLabel");
-        frame.setSize(400, 200);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame frame = new JFrame("Label");
+        JLabel label = new JLabel("Halo, ini JLabel!", JLabel.CENTER);
 
-        JLabel label = new JLabel("Halo, ini teks dari JLabel!", JLabel.CENTER);
         frame.add(label);
-
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 }
