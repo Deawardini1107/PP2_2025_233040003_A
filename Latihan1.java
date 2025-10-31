@@ -1,0 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package PERTEMUN5;
+
+import javax.swing.JFrame;
+
+/**
+ *
+ * @author ASUS
+ */
+public class Latihan1 {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Latihan 1 - Jendela Kosong");
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
+
+    
