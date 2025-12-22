@@ -1,0 +1,9 @@
+/target/
+*.class
+*.log
+*.tmp
+*.download
+*.html
+*_files/
+README.md~
+nbproject/private/
