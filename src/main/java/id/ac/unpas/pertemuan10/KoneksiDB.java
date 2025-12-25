@@ -7,21 +7,25 @@ package id.ac.unpas.pertemuan10;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class KoneksiDB {
-    private static Connection koneksi;
+    private static Connection mysqlconfig;
 
-    public static Connection getKoneksi() {
-        if (koneksi == null) {
-            try {
-                String url = "jdbc:mysql://localhost:3306/kampus_db";
-                String user = "root";
-                String pass = "";
-                koneksi = DriverManager.getConnection(url, user, pass);
+    public static Connection configDB() throws SQLException{
+        try {
+            String url = "jdbc:mysql://localhost:3306/kampus_db";
+            String user = "root";
+            String pass = "";
+            
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+            
+            mysqlconfig = DriverManager.getConnection(url, user, pass);
             } catch (SQLException e) {
-                System.out.println("Koneksi gagal: " + e.getMessage());
+                JOptionPane.showMessageDialog(null, "Koneksi gagal: " + e.getMessage());
             }
-        }
-        return koneksi;
+        return mysqlconfig;
+        
     }
+   
 }
